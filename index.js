@@ -52,9 +52,8 @@ const displayDataLoad = loadData => {
                                 </div>
                                 <div>${show.total_view ? show.total_view : 'No View'}</div>
                                 <div>
-                                <button onclick="showDataDetails('${show._id}')" href= "#" class ="btn btn-primary ms-5" data-bs-toggle="modal" data-bs-target="#phoneDetailModal">Show Details</button>
+                                    <button onclick="showDataDetails('${show._id}')" href= "#" class ="btn btn-primary ms-5" data-bs-toggle="modal" data-bs-target="#phoneDetailModal">Show Details</button>
                                 </div>
-                               
                             </div>
                         </div>
                     </div>
