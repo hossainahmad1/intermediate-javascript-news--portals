@@ -8,7 +8,7 @@ const displayNav = loads => {
     const dataContainer = document.getElementById('data-container');
 
     loads.forEach(load => {
-        toggleSpinner(true);
+
         // console.log(load);
         const createLi = document.createElement('li');
         createLi.innerHTML = `
@@ -16,7 +16,7 @@ const displayNav = loads => {
         `;
         dataContainer.appendChild(createLi);
     });
-
+    toggleSpinner(true);
 }
 
 
