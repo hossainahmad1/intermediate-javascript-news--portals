@@ -81,7 +81,7 @@ const displayDataDetails = data => {
 }
 
 document.getElementById('blog').addEventListener('click', function () {
-
+    
 })
 
 // spinner
