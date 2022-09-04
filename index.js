@@ -83,14 +83,13 @@ const displayDataDetails = data => {
 // spinner
 const toggleSpinner = isLoading => {
     const loaderSection = document.getElementById('loader');
-    if (isLoading === true) {
+    if (isLoading) {
         loaderSection.classList.remove('d-none');
     }
     else {
         loaderSection.classList.add('d-none');
     }
 }
-
 
 loadNav();
 loadData('01');
