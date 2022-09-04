@@ -80,10 +80,6 @@ const displayDataDetails = data => {
     `
 }
 
-document.getElementById('blog').addEventListener('click', function () {
-    
-})
-
 // spinner
 const toggleSpinner = isLoading => {
     const loaderSection = document.getElementById('loader');
