@@ -1,11 +1,10 @@
 const loadNav = () => {
-    const url = ` https://openapi.programming-hero.com/api/news/categories`
+    const url = `https://openapi.programming-hero.com/api/news/categories`
     fetch(url)
         .then(res => res.json())
         .then(data => displayNav(data.data.news_category))
 }
 const displayNav = loads => {
-
     const dataContainer = document.getElementById('data-container');
     loads.forEach(load => {
         toggleSpinner(true);
@@ -16,11 +15,9 @@ const displayNav = loads => {
         `;
         dataContainer.appendChild(createLi);
     });
-
 }
 
-
-// loadData display show
+// display show loadData
 const loadData = async (id) => {
     const url = `https://openapi.programming-hero.com/api/news/category/${id}`
     const res = await fetch(url)
@@ -31,7 +28,7 @@ const displayDataLoad = loadData => {
     const displayDataContainer = document.getElementById('display-data-container');
     displayDataContainer.innerHTML = '';
     loadData.forEach(show => {
-        console.log(show)
+        // console.log(show)
         const dataDiv = document.createElement('div');
         dataDiv.classList.add('col-12');
         dataDiv.innerHTML = `
@@ -41,7 +38,6 @@ const displayDataLoad = loadData => {
                     <img src="${show.image_url}" class="img-fluid rounded-start" alt="...">
                  </div>
                         <div class="col-md-8">
-                    
                         <div class="card-body">
                             <h5 class="card-title">${show.title}</h5>
                             <p class="card-text text-muted">${show.details.slice(0, 300) + "..."}.</p>
@@ -84,6 +80,9 @@ const displayDataDetails = data => {
     `
 }
 
+document.getElementById('blog').addEventListener('click', function () {
+
+})
 
 // spinner
 const toggleSpinner = isLoading => {
@@ -96,7 +95,7 @@ const toggleSpinner = isLoading => {
     }
 }
 
-loadNav();
 
+loadNav();
 loadData('01');
 
