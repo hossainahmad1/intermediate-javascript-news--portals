@@ -68,14 +68,16 @@ const showDataDetails = async id => {
     displayDataDetails(data.data[0]);
 }
 const displayDataDetails = data => {
-    console.log(data);
+    // console.log(data);
     const modalTitle = document.getElementById('data-title');
     modalTitle.innerHTML = `
     <h4>${data.author.name ? data.author.name : 'No Author Name'}</h4>
     `;
     const dataDetails = document.getElementById('data-details');
     dataDetails.innerHTML = `
+    <p>Title:${data.title ? data.title : 'No title'}</p>
     <p>Published date: ${data.author ? data.author.published_date : 'No published date'}</p>
+    <p>${data.total_view ? data.total_view : 'No view'}</p>
     <img src="${data.author.img}" class="img-fluid rounded" style="max-width: 50px;" alt="...">
     `
 }
